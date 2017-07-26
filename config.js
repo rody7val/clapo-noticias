@@ -28,7 +28,20 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'https://clapo-noticias.herokuapp.com/',
-        mail: {},
+        mail: {
+            service: 'Gmail',
+            from: '"C.L.A.Po Noticias" <noticias@clapo.com.ar>',
+            transport: 'SMTP',
+            options: {
+                host: 'smtp.gmail.com',
+                secureConnection: true,
+                port: 465,
+                auth:  {
+                    user: process.env.USER_EMAIL,
+                    pass: process.env.PASS_EMAIL
+                }
+            }
+        },
         database: {
             client: 'postgres',
             connection: {
@@ -61,16 +74,20 @@ config = {
         // Example mail config
         // Visit https://docs.ghost.org/v0.11.9/docs/mail-config for instructions
         // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
+        mail: {
+            service: 'Gmail',
+            from: '"C.L.A.Po Noticias" <noticias@clapo.com.ar>',
+            transport: 'SMTP',
+            options: {
+                host: 'smtp.gmail.com',
+                secureConnection: true,
+                port: 465,
+                auth:  {
+                    user: process.env.USER_EMAIL,
+                    pass: process.env.PASS_EMAIL
+                }
+            }
+        },
         // ```
 
         // #### Database
