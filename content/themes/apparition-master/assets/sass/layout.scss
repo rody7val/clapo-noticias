@@ -1,0 +1,62 @@
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0;}
+
+body{
+	background-color: $white;
+	font-size: 80%;
+	@media screen and (min-width: 45em){
+		font-size: 90%;
+	}
+	@media screen and (min-width: $dbp){
+		font-size: 100%;
+	}
+	.wrapper{
+		margin: 0 auto;
+		max-width: $dbp;
+		padding: 6.25em 2em 2em;
+		width:100%;
+		@include clearfix;
+		.post-wrap{
+			padding: 0;
+			width: 100%;
+			@media screen and (min-width: $dbp){
+				border-left: $bw $grey;
+				float: left;
+				padding: 0 0 0 2em;
+				width: $psz;
+			}
+			article{
+				border-bottom:$bw $grey;
+				margin: 0; 
+				padding: 2em 0 0;
+				width: 98%;
+				@media screen and (min-width: $tbp){
+					padding: 2em;
+				}
+				@include clearfix;
+				&:last-of-type{
+					border: none;
+				}
+				@media screen and (min-width: $dbp){
+					padding: 2em 0 0;
+					&:first-of-type{
+						padding: 0;
+					}
+				}
+			}
+		}
+		.pagination{
+		clear: both;
+		font-family: 'PT Sans', sans-serif;
+		height: inherit;
+		padding: 4em 0 0;
+		text-align: center;
+		a{
+			color: $red;
+			text-decoration: none;
+			&:hover{
+				color: $black + 50;
+			}
+		}
+	}
+	}
+}

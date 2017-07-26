@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+<div id="bk" class="back">{{#if @blog.logo}}<a id="blog-logo" class="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" />{{/if}}<span id="mc">home</span></a></div>
+<div class="post-wrap">
+    {{! Everything below outputs content of the the post which has been published }}
+	<article class="{{post_class}}">
+    	<h1 class="post-title">{{{title}}}</h1>
+
+    	<time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+
+    	{{content}}
+
+    	{{#if tags}}<h4><b>Tags:</b> {{tags separator=" | "}}</h4>{{/if}}
+
+    </article>
+</div>
+
+{{> post-header}}	
+
+{{/post}}

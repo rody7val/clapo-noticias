@@ -1,0 +1,70 @@
+.post-template{
+	.wrapper{
+		.back{
+			position: relative;
+			@include clearfix;
+			@media screen and (min-width: $tbp){
+				padding: 0em 2em;
+			}
+			@media screen and (min-width: $dbp){
+				float: left;
+				padding: 0 2em 0 0;
+				margin: 0 0 2em;
+				width: $hsz;
+			}
+			.logo{
+				background-color: $red;
+				display: block;
+				float: left;
+				height: $pL;
+				margin: 0;
+				width:$pL;
+				cursor: pointer;
+				padding: 0;
+				overflow: hidden;
+
+				img{
+					height: $pL;
+					width: $pL;
+				}
+				
+				@include single-transition(width, $hbtn); 
+
+				&:hover{
+					width: 100%;
+				}
+			}
+			span{	
+				color: $white;
+				display: block;
+				font-family: 'PT Sans', sans-serif;
+				font-weight: 300;
+				opacity: 0;
+				position: absolute;
+				text-align: center;
+				text-transform: lowercase;
+				top: 0.7em;
+				width: 88%;
+
+				@include single-transition(opacity, $hbtn); 
+				
+			}
+			&:hover span{
+				display: block;
+				opacity: 1;
+			}
+		}
+		.post-wrap{
+			@media screen and (min-width: $dbp){
+				float: right;	
+			}
+			article{
+				border-bottom: none;
+				img{
+					height: auto;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
