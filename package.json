@@ -1,20 +1,12 @@
 {
-  "name": "ghost",
-  "version": "0.11.11",
-  "description": "Just a blogging platform.",
-  "author": "Ghost Foundation",
-  "homepage": "http://ghost.org",
-  "keywords": [
-    "ghost",
-    "blog",
-    "cms"
-  ],
+  "name": "clapo-noticias",
+  "version": "0.1",
+  "description": "Blog de Noticias",
+  "author": "Rodolfo Valguarnera <rod7val@gmail.com> (https://github.com/rody7val/)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/TryGhost/Ghost.git"
+    "url": "git://github.com/rody7val/clapo-noticias.git"
   },
-  "bugs": "https://github.com/TryGhost/Ghost/issues",
-  "contributors": "https://github.com/TryGhost/Ghost/graphs/contributors",
   "license": "MIT",
   "main": "./core/index",
   "scripts": {
